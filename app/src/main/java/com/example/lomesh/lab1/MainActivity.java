@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button add,sub,mul,div;
+    Button add,sub,mul,div,clear;
     EditText number1, number2;
 
     TextView answer;
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         number1 = (EditText)findViewById(R.id.number1);
         number2 = (EditText)findViewById(R.id.number2);
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         sub = (Button)findViewById(R.id.sub);
         mul = (Button)findViewById(R.id.mul);
         div = (Button)findViewById(R.id.div);
+        clear = (Button)findViewById(R.id.clear);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +81,14 @@ public class MainActivity extends AppCompatActivity {
                 }
                 }
         );
-
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                number2.getText().clear();
+                number1.getText().clear();
+                answer.setText("0");
+                }
+                }
+        );
     }
 }
