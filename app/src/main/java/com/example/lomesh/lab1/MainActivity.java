@@ -1,11 +1,14 @@
 package com.example.lomesh.lab1;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+//import android.support.design.widget.BaseTransientBottomBar;
+import android.support.design.widget.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     EditText number1, number2;
 
     TextView answer;
-    Float num1,num2,temp;
+    double num1,num2,temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
                 temp = num1 + num2;
                 answer.setText(String.valueOf(temp));
 
+                Snackbar snackbar = Snackbar
+                        .make(view, "Addition is "+temp, Snackbar.LENGTH_LONG);
+
+                snackbar.show();
+
+
+
             }
 
         }
@@ -54,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
                 temp = num1 - num2;
                 answer.setText(String.valueOf(temp));
 
+                Snackbar snackbar = Snackbar
+                        .make(view, "Subtraction is "+temp, Snackbar.LENGTH_LONG);
+
+                snackbar.show();
+
                 }
         }
         );
@@ -66,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
                 temp = num1 * num2;
                 answer.setText(String.valueOf(temp));
 
+                Snackbar snackbar = Snackbar
+                        .make(view, "Multiply is "+temp, Snackbar.LENGTH_LONG);
+
+                snackbar.show();
                 }
                 }
         );
@@ -78,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
                 temp = num1 / num2;
                 answer.setText(String.valueOf(temp));
 
+                Snackbar snackbar = Snackbar
+                        .make(view, "Division is "+temp, Snackbar.LENGTH_LONG);
+
+                snackbar.show();
                 }
                 }
         );
