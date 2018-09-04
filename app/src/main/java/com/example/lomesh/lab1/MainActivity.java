@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 temp = num1 + num2;
                 answer.setText(String.valueOf(temp));
 
-                Snackbar snackbar = Snackbar
-                        .make(view, "Addition is "+temp, Snackbar.LENGTH_LONG);
+                Snackbar snackbar = Snackbar.make(view, "Addition is "+temp, Snackbar.	LENGTH_SHORT).setActionTextColor(Color.BLUE);
 
                 snackbar.show();
+
 
 
 
@@ -64,9 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 temp = num1 - num2;
                 answer.setText(String.valueOf(temp));
 
-                Snackbar snackbar = Snackbar
-                        .make(view, "Subtraction is "+temp, Snackbar.LENGTH_LONG);
-
+                Snackbar snackbar = Snackbar.make(view, "Subtraction is "+temp, Snackbar.LENGTH_SHORT);
                 snackbar.show();
 
                 }
@@ -81,9 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 temp = num1 * num2;
                 answer.setText(String.valueOf(temp));
 
-                Snackbar snackbar = Snackbar
-                        .make(view, "Multiply is "+temp, Snackbar.LENGTH_LONG);
-
+                Snackbar snackbar = Snackbar.make(view, "Multiply is "+temp, Snackbar.LENGTH_SHORT);
                 snackbar.show();
                 }
                 }
@@ -97,9 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 temp = num1 / num2;
                 answer.setText(String.valueOf(temp));
 
-                Snackbar snackbar = Snackbar
-                        .make(view, "Division is "+temp, Snackbar.LENGTH_LONG);
-
+                Snackbar snackbar = Snackbar.make(view,"Division is "+temp, Snackbar.LENGTH_SHORT);
                 snackbar.show();
                 }
                 }

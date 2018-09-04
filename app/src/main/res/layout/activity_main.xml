@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="#D3E39E"
     android:layout_height="match_parent"
+    android:background="#0A100D"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+
+
 
     <EditText
         android:id="@+id/number1"
@@ -16,13 +20,16 @@
         android:layout_height="60dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="30dp"
+        android:textColorHighlight="#C44900"
         android:layout_marginRight="30dp"
         android:layout_marginTop="30dp"
-        android:textSize="25sp"
         android:background="@android:color/transparent"
+        android:textColorHint="#7C7C7C"
         android:hint="Enter Number 1"
         android:inputType="number|numberSigned|numberDecimal"
-        android:textAlignment="center" />
+        android:textColor="#E2FCEF"
+        android:textAlignment="center"
+        android:textSize="23sp" />
 
     <EditText
         android:id="@+id/number2"
@@ -30,101 +37,115 @@
         android:layout_height="60dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:textSize="25sp"
+        android:textColorHint="#7C7C7C"
+        android:layout_marginBottom="15dp"
         android:background="@android:color/transparent"
         android:hint="Enter Number 2"
+        android:textColor="#E2FCEF"
         android:inputType="number|numberSigned|numberDecimal"
-        android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/ans"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="right"
-        android:textDirection="ltr"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:textAlignment="center"
-        android:layout_marginTop="20dp"
-        android:background="#D3E39E"
-        android:layout_marginBottom="10dp"
-        android:textSize="35sp"
-        android:text="00" />
+        android:textSize="23sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#13262F">
 
-        <Button
-            android:id="@+id/add"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            style="?android:attr/borderlessButtonStyle"
-            android:background="#433E3F"
-            android:text="+"
-            android:textColor="#C0B7B1"
-            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/ans"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#353535"
+            android:padding="4dp"
+            android:text="00"
+            android:textAlignment="center"
+            android:textColor="#E2FCEF"
+            android:textDirection="ltr"
+            android:textSize="35sp" />
 
-        <Button
-            android:id="@+id/sub"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="#433E3F"
-            android:text="-"
-            style="?android:attr/borderlessButtonStyle"
-            android:textColor="#C0B7B1"
-            android:textSize="25sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/add"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#433E3F"
+                android:text="+"
+                android:textColor="#C0B7B1"
+                android:textSize="35sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <Button
-            android:id="@+id/mul"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="#433E3F"
-            android:text="*"
-            style="?android:attr/borderlessButtonStyle"
-            android:textColor="#C0B7B1"
-            android:textSize="25sp" />
+            <Button
+                android:id="@+id/sub"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#433E3F"
+                android:text="-"
+                android:textColor="#C0B7B1"
+                android:textSize="35sp" />
 
-        <Button
-            android:id="@+id/div"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:background="#433E3F"
-            android:layout_marginBottom="0dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            style="?android:attr/borderlessButtonStyle"
-            android:text="÷"
-            android:textColor="#C0B7B1"
-            android:textSize="25sp" />
-    </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mul"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#433E3F"
+                android:text="x"
+                android:textColor="#C0B7B1"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/div"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#433E3F"
+                android:text="÷"
+                android:textColor="#C0B7B1"
+                android:textSize="35sp" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/clear"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#FF5E5B"
             android:text="CLEAR"
+            android:textColor="#E2FCEF"
             android:textSize="25sp"
-            android:background="#C93333"/>
-
+            android:layout_marginBottom="20dp"/>
+    </LinearLayout>
 </LinearLayout>
